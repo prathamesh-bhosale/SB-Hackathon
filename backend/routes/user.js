@@ -19,7 +19,7 @@ router.post('/register', (req, res) => {
           const token = jwt.sign(payload, config.secret)
           const userData = {
             token,
-            name: `${result['name']} ${result['email']} ${result['phone']}  `,
+            name: `${result['name']} ${result['email']} ${result['phone'] } ${result['encryptedPassword']} `,
             res: result,
 
           }
